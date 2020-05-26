@@ -26,126 +26,63 @@ export const fonts = {
 
 export const Topleftborder = {
 	sbr :{
-	  border: "2px solid red",
-  	  margin : "10px",
-      padding: "50px",
-  	  textalign: "center",
-  	  bordertopleftradius: "0px",
+	  bordertopleftradius: "0px"
 	},
 	mbr :{
-	  border: "2px solid green",
-  	  margin : "10px",
-      padding: "50px",
-  	  textalign: "center",
-  	  bordertopleftradius: "16px",
+  	  bordertopleftradius: "16px"
 	},
 	lbr :{
-	  border: "2px solid blue",
-  	  margin : "10px",
-      padding: "50px",
-  	  textalign: "center",
-  	  bordertopleftradius: "32px",
+  	  bordertopleftradius: "32px"
 	},
 	xlbr :{
-	  border: "2px solid purple",
-  	  margin : "10px",
-      padding: "50px",
-  	  textalign: "center",
-  	  bordertopleftradius: "50px",
+  	  bordertopleftradius: "50px"
 	}
 }
 
 export const Bottomleftborder = {
 	sbr :{
-	  border: "2px solid red",
-  	  margin : "10px",
-      padding: "50px",
-  	  textalign: "center",
-  	  borderbottomleftradius: "0px",
+	  borderbottomleftradius: "0px"
 	},
 	mbr :{
-	  border: "2px solid green",
-  	  margin : "10px",
-      padding: "50px",
-  	  textalign: "center",
-  	  borderbottomleftradius: "16px",
+  	  borderbottomleftradius: "16px"
 	},
 	lbr :{
-	  border: "2px solid blue",
-  	  margin : "10px",
-      padding: "50px",
-  	  textalign: "center",
-  	  borderbottomleftradius: "32px",
+  	  borderbottomleftradius: "32px"
 	},
 	xlbr :{
-	  border: "2px solid purple",
-  	  margin : "10px",
-      padding: "50px",
-  	  textalign: "center",
-  	  borderbottomleftradius: "50px",
+  	  borderbottomleftradius: "50px"
 	}
 }
 export const Toprightborder = {
 	sbr :{
-	  border: "2px solid red",
-  	  margin : "10px",
-      padding: "50px",
-  	  textalign: "center",
-  	  bordertoprightradius: "0px",
+	  bordertoprightradius: "0px"
 	},
 	mbr :{
-	  border: "2px solid green",
-  	  margin : "10px",
-      padding: "50px",
-  	  textalign: "center",
-  	  bordertoprightradius: "16px",
+  	  bordertoprightradius: "16px"
 	},
 	lbr :{
-	  border: "2px solid blue",
-  	  margin : "10px",
-      padding: "50px",
-  	  textalign: "center",
-  	  bordertoprightradius: "32px",
+  	  bordertoprightradius: "32px"
 	},
 	xlbr :{
-	  border: "2px solid purple",
-  	  margin : "10px",
-      padding: "50px",
-  	  textalign: "center",
-  	  bordertoprightradius: "50px",
+  	  bordertoprightradius: "50px"
 	}
 }
 
 export const Bottomrightborder = {
 	sbr :{
-	  border: "2px solid red",
-  	  margin : "10px",
-      padding: "50px",
-  	  textalign: "center",
-  	  borderbottomrightradius: "0px",
+	  borderbottomrightradius: "0px"
 	},
 	mbr :{
-	  border: "2px solid green",
-  	  margin : "10px",
-      padding: "50px",
-  	  textalign: "center",
-  	  borderbottomrightradius: "16px",
+  	  borderbottomrightradius: "16px"
 	},
 	lbr :{
-	  border: "2px solid blue",
-  	  margin : "10px",
-      padding: "50px",
-  	  textalign: "center",
-  	  borderbottomrightradius: "32px",
+  	  borderbottomrightradius: "32px"
 	},
 	xlbr :{
-	  border: "2px solid purple",
-  	  margin : "10px",
-      padding: "50px",
-  	  textalign: "center",
-  	  borderbottomrightradius: "50px",
+  	  borderbottomrightradius: "50px"
 	}
 }
+
 export const ThemeContext = React.createContext(themes.dark);
 export const FontContext = React.createContext(fonts.small);
 export const TopLeftBorderContext = React.createContext(Topleftborder.sbr);

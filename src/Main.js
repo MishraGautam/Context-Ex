@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {ThemeContext, FontContext, TopLeftBorderContext, BottomLeftBorderContext, TopRightBorderContext, BottomRightBorderContext} from './AllContext'
 import {Form, FormGroup, Input, Label, Row, Col, Container, Button} from 'reactstrap'
+import './App.css'
 import axios from 'axios'
 import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
@@ -50,12 +51,12 @@ class Main extends Component{
                                   <div style={{ backgroundColor : `${value.background}` , color : `${value.color}`}}>
                                     <Container>
                                       <Row>
-                                        <Col sm={5} style={{ border : `${data2.border}`, margin : `${data2.margin}`, padding: `${data2.padding}`, textAlign : `${data2.textalign}`, borderTopLeftRadius : `${data2.bordertopleftradius}`}}><h1><Slider min={0} max={50} marks={{ 0: 0, 16: 16, 32: 32, 50: 50 }} step={null} onChange={handletopleftborder} /></h1></Col>
-                                        <Col sm={5} style={{ border : `${data4.border}`, margin : `${data4.margin}`, padding: `${data4.padding}`, textAlign : `${data4.textalign}`, borderTopRightRadius : `${data4.bordertoprightradius}`}}><h1><Slider min={0} max={50} marks={{ 0: 0, 16: 16, 32: 32, 50: 50 }} step={null} onChange={handletoprightborder} /></h1></Col>
+                                        <Col sm={5} className="content"><h1><Slider min={0} max={50} marks={{ 0: 0, 16: 16, 32: 32, 50: 50 }} step={null} onChange={handletopleftborder} /></h1></Col>
+                                        <Col sm={5} className="content"><h1><Slider min={0} max={50} marks={{ 0: 0, 16: 16, 32: 32, 50: 50 }} step={null} onChange={handletoprightborder} /></h1></Col>
                                       </Row>
                                       <Row>
-                                        <Col sm={5} style={{ border : `${data3.border}`, margin : `${data3.margin}`, padding: `${data3.padding}`, textAlign : `${data3.textalign}`, borderBottomLeftRadius : `${data3.borderbottomleftradius}`}}><h1><Slider min={0} max={50} marks={{ 0: 0, 16: 16, 32: 32, 50: 50 }} step={null} onChange={handlebottomleftborder} /></h1></Col>
-                                        <Col sm={5} style={{ border : `${data5.border}`, margin : `${data5.margin}`, padding: `${data5.padding}`, textAlign : `${data5.textalign}`, borderBottomRightRadius : `${data5.borderbottomrightradius}`}}><h1><Slider min={0} max={50} marks={{ 0: 0, 16: 16, 32: 32, 50: 50 }} step={null} onChange={handlebottomrightborder} /></h1></Col>
+                                        <Col sm={5} className="content"><h1><Slider min={0} max={50} marks={{ 0: 0, 16: 16, 32: 32, 50: 50 }} step={null} onChange={handlebottomleftborder} /></h1></Col>
+                                        <Col sm={5} className="content"><h1><Slider min={0} max={50} marks={{ 0: 0, 16: 16, 32: 32, 50: 50 }} step={null} onChange={handlebottomrightborder} /></h1></Col>
                                       </Row>
                                     </Container><br/><br/>
                                     <Container>
@@ -76,7 +77,7 @@ class Main extends Component{
                                       <Col sm={10}>
                                         {this.state.results.map((value,index)=>{
                                           return (
-                                            <div key={index} className="mr-5">
+                                            <div key={index} className="content mr-5" style={{borderTopLeftRadius : `${data2.bordertopleftradius}`, borderTopRightRadius : `${data4.bordertoprightradius}`, borderBottomLeftRadius : `${data3.borderbottomleftradius}`, borderBottomRightRadius : `${data5.borderbottomrightradius}`}}>
                                               <p style={{ fontSize : `${data.fontSize}`}}>
                                                 Username : {value.username},
                                                 Name : {value.name},
@@ -84,7 +85,6 @@ class Main extends Component{
                                                 Address : City : {value.address.city}, Street : {value.address.street}, Zip Code : {value.address.zipcode},
                                                 Phone : {value.phone}
                                               </p>
-                                              <hr/>
                                             </div>
                                         )})}
                                       </Col>
