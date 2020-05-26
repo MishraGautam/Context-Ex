@@ -77,13 +77,13 @@ class Main extends Component{
                                       <Col sm={10}>
                                         {this.state.results.map((value,index)=>{
                                           return (
-                                            <div key={index} className="content mr-5" style={{borderTopLeftRadius : `${data2.bordertopleftradius}`, borderTopRightRadius : `${data4.bordertoprightradius}`, borderBottomLeftRadius : `${data3.borderbottomleftradius}`, borderBottomRightRadius : `${data5.borderbottomrightradius}`}}>
+                                            <div key={index} className="content ml-5" style={{borderTopLeftRadius : `${data2.bordertopleftradius}`, borderTopRightRadius : `${data4.bordertoprightradius}`, borderBottomLeftRadius : `${data3.borderbottomleftradius}`, borderBottomRightRadius : `${data5.borderbottomrightradius}`}}>
                                               <p style={{ fontSize : `${data.fontSize}`}}>
-                                                Username : {value.username},
-                                                Name : {value.name},
-                                                Email :{value.email},
-                                                Address : City : {value.address.city}, Street : {value.address.street}, Zip Code : {value.address.zipcode},
-                                                Phone : {value.phone}
+                                                Username : {value.username}<br/>
+                                                Name : {value.name}<br/>
+                                                Email :{value.email}<br/>
+                                                Address : City : {value.address.city}, Street : {value.address.street}, Zip Code : {value.address.zipcode}<br/>
+                                                Phone : {value.phone}<br/>
                                               </p>
                                             </div>
                                         )})}
