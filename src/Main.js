@@ -12,7 +12,9 @@ class Main extends Component{
         super(props);
         this.state={
           results : [],
-          checked : false,
+          namecheck : true,
+          usercheck : true,
+          addresscheck : true,
         }
     }
 
@@ -27,9 +29,17 @@ class Main extends Component{
         })
     }
 
-    toggleCheck=()=>{
-      const {checked} = this.state;
-      this.setState({checked: !checked}, ()=>{console.log(this.state.checked)})
+    handleNameCheck =()=>{
+    const {namecheck} = this.state;
+    this.setState({namecheck:!namecheck})
+    }
+    handleUserCheck =()=>{
+      const {usercheck} = this.state;
+      this.setState({usercheck:!usercheck})
+    }
+    handleAddressCheck =()=>{
+      const {addresscheck} = this.state;
+      this.setState({addresscheck:!addresscheck})
     }
 
   
@@ -69,9 +79,9 @@ class Main extends Component{
                                     <Row className="ml-5">
                                       <Col sm={2}>
                                        <Form>
-                                        <FormGroup check><Label check><Input type="checkbox" onChange={this.toggleCheck}/>{' '}Name</Label></FormGroup><br/>
-                                        <FormGroup check><Label check><Input type="checkbox" onChange={this.toggleCheck}/>{' '}Username</Label></FormGroup><br/>
-                                        <FormGroup check><Label check><Input type="checkbox" onChange={this.toggleCheck}/>{' '}Address</Label></FormGroup><br/>
+                                        <FormGroup check><Label check><Input type="checkbox" onChange={this.handleNameCheck} defaultChecked={this.state.namecheck}/>{' '}Name</Label></FormGroup><br/>
+                                        <FormGroup check><Label check><Input type="checkbox" onChange={this.handleUserCheck} defaultChecked={this.state.usercheck}/>{' '}Username</Label></FormGroup><br/>
+                                        <FormGroup check><Label check><Input type="checkbox" onChange={this.handleAddressCheck} defaultChecked={this.state.addresscheck}/>{' '}Address</Label></FormGroup><br/>
                                        </Form>
                                       </Col>
                                       <Col sm={10}>
@@ -79,11 +89,11 @@ class Main extends Component{
                                           return (
                                             <div key={index} className="content ml-5" style={{borderTopLeftRadius : `${data2.bordertopleftradius}`, borderTopRightRadius : `${data4.bordertoprightradius}`, borderBottomLeftRadius : `${data3.borderbottomleftradius}`, borderBottomRightRadius : `${data5.borderbottomrightradius}`}}>
                                               <p style={{ fontSize : `${data.fontSize}`}}>
-                                                Username : {value.username}<br/>
-                                                Name : {value.name}<br/>
+                                                {this.state.usercheck === true ? `Username : ${value.username}` : ""}<br/>
+                                                {this.state.namecheck === true ? `Name : ${value.name}` : ""}<br/>
                                                 Email :{value.email}<br/>
-                                                Address : City : {value.address.city}, Street : {value.address.street}, Zip Code : {value.address.zipcode}<br/>
-                                                Phone : {value.phone}<br/>
+                                                {this.state.addresscheck === true ? `Address : City : ${value.address.city}, Street : ${value.address.street}, Zip Code : ${value.address.zipcode}` : ""}<br/>
+                                                Phone : {value.phone}
                                               </p>
                                             </div>
                                         )})}

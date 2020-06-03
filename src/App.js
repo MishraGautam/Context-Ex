@@ -13,8 +13,24 @@ class App extends Component{
          topleftborder : Topleftborder.sbr,
          bottomleftborder : Bottomleftborder.sbr,
          toprightborder : Toprightborder.sbr,
-         bottomrightborder : Bottomrightborder.sbr
+         bottomrightborder : Bottomrightborder.sbr,
+         namecheck : true,
+         usercheck : true,
+         addresscheck : true,
     };
+    }
+
+    handleNameCheck =()=>{
+    const {namecheck} = this.state;
+    this.setState({namecheck:!namecheck})
+    }
+    handleUserCheck =()=>{
+      const {usercheck} = this.state;
+      this.setState({usercheck:!usercheck})
+    }
+    handleAddressCheck =()=>{
+      const {addresscheck} = this.state;
+      this.setState({addresscheck:!addresscheck})
     }
 
     toggleTheme = () => {

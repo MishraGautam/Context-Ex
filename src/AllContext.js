@@ -11,6 +11,7 @@ export const themes = {
   },
 };
 
+
 export const fonts = {
 	small: {
 		fontSize : '10px'
@@ -23,6 +24,7 @@ export const fonts = {
 
 	}
 }
+
 
 export const Topleftborder = {
 	sbr :{
